@@ -1,0 +1,27 @@
+{
+  "name": "javascript-architecture-full",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "@unic/composite-observer": "0.0.10",
+    "fastdom": "1.0.9",
+    "mdn-polyfills": "5.20.0",
+    "object-fit-images": "3.2.4",
+    "raf-throttle": "2.0.5",
+    "vue": "2.5.16"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": [],
+  "alias": {
+    "@": "/src",
+    "vue": "vue/dist/vue.esm.js"
+  }
+}

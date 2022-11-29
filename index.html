@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/" />
+    <title>JavaScript Architektur-Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- If it's not necessary to implement this as render-blocking, ass the async attribute -->
+    <script src="src/scripts/head.js"></script>
+    <link rel="stylesheet" src="src/styles.scss" />
+  </head>
+  <body>
+    <button data-module="button">Hello</button>
+    <button data-module="button">World</button>
+
+    <div data-module="vue-module">
+      <p v-html="options.foo">Loading...</p>
+    </div>
+
+    <div
+      data-module="vue-module"
+      data-vue-module-options='{"foo": "custom options"}'
+    >
+      <p v-html="options.foo">Loading...</p>
+    </div>
+
+    <div style="height: 200vh;"></div>
+
+    <div data-module="lazy-module">Lazy...</div>
+
+    <p>Combine Modules:</p>
+
+    <button
+      data-module="button lazy-module"
+      data-lazy-module-options='{ "foo": "custom" }'
+    >
+      Lazy...
+    </button>
+
+    <div style="height: 200vh;"></div>
+
+    <span class="c-image c-image--ratio-4-3" data-module="image">
+      <span class="c-image__loader"></span>
+      <img
+        class="c-image__image"
+        data-image="image"
+        src="/src/images/4-3-100.png"
+        data-src="/src/images/4-3-1600.png"
+        srcset="/src/images/4-3-100.png 100w"
+        data-srcset="
+          /src/images/4-3-300.png 300w,
+          /src/images/4-3-400.png 400w,
+          /src/images/4-3-600.png 600w,
+          /src/images/4-3-800.png 800w,
+          /src/images/4-3-1200.png 1200w,
+          /src/images/4-3-1600.png 1600w,
+          /src/images/4-3-2000.png 2000w
+        "
+        sizes="50vw"
+        alt=""
+      />
+    </span>
+
+    <script defer src="src/scripts/main.js"></script>
+  </body>
+</html>
