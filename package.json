@@ -13,7 +13,7 @@
     "mdn-polyfills": "5.20.0",
     "object-fit-images": "3.2.4",
     "raf-throttle": "2.0.5",
-    "vue": "2.5.16"
+    "vue": "3.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.2.0",
